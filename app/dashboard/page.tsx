@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default async function DashboardPage() {
-  if (!hasActiveAdminSession()) {
+  if (!(await hasActiveAdminSession())) {
     redirect("/login");
   }
 

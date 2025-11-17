@@ -4,7 +4,7 @@ import { hasActiveAdminSession } from "@/lib/auth";
 import { getAllLinks } from "@/lib/link-service";
 
 export async function GET() {
-  if (!hasActiveAdminSession()) {
+  if (!(await hasActiveAdminSession())) {
     return NextResponse.json({ error: "Bạn cần đăng nhập" }, { status: 401 });
   }
 
