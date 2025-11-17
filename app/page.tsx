@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { RecentLinks } from "@/components/dashboard/recent-links";
 import { ShortenForm } from "@/components/forms/shorten-form";
 import { Skeleton } from "@/components/ui/skeleton";
