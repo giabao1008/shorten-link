@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 205 42% 97%;
+    --foreground: 215 28% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 16%;
+    --primary: 191 63% 34%;
+    /* #1f7a8c */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 188 55% 94%;
+    --secondary-foreground: 210 24% 28%;
+    --muted: 205 28% 92%;
+    --muted-foreground: 210 15% 38%;
+    --accent: 188 55% 94%;
+    --accent-foreground: 210 24% 28%;
+    --destructive: 2 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 205 23% 86%;
+    --input: 205 23% 86%;
+    --ring: 191 63% 34%;
+    --radius: 0.95rem;
+  }
+
+  .dark {
+    --background: 215 24% 8%;
+    --foreground: 210 33% 96%;
+    --card: 215 24% 12%;
+    --card-foreground: 210 33% 96%;
+    --popover: 215 24% 12%;
+    --popover-foreground: 210 33% 96%;
+    --primary: 191 55% 60%;
+    --primary-foreground: 215 24% 8%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 210 33% 92%;
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 20% 80%;
+    --accent: 210 20% 18%;
+    --accent-foreground: 210 33% 92%;
+    --destructive: 2 84% 64%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 18% 26%;
+    --input: 210 18% 26%;
+    --ring: 191 55% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans min-h-screen antialiased;
+    background-image: radial-gradient(circle at top right, rgba(31, 122, 140, 0.18), transparent 45%),
+      radial-gradient(circle at bottom left, rgba(125, 209, 221, 0.25), transparent 40%),
+      linear-gradient(135deg, #f4f9fb, #eef5f8);
+  }
+
+  .glass-panel {
+    @apply bg-white/90 dark:bg-slate-900/40 backdrop-blur-xl border border-white/80 shadow-lg;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(circle at top left, rgba(31, 122, 140, 0.35), transparent 45%),
+      radial-gradient(circle at bottom right, rgba(125, 209, 221, 0.35), transparent 40%),
+      linear-gradient(135deg, #f0f7fa, #e7f2f6);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(31, 122, 140, 0.45);
+    border-radius: 999px;
+  }
+}
